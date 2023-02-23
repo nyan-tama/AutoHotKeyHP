@@ -5,8 +5,7 @@ import Head from 'next/head';
 import { ThemeProvider } from 'next-themes';
 import ModalsContainer from '@/components/modal-views/container';
 import DrawersContainer from '@/components/drawer-views/container';
-import SettingsButton from '@/components/settings/settings-button';
-import SettingsDrawer from '@/components/settings/settings-drawer';
+
 import { WalletProvider } from '@/lib/hooks/use-connect';
 import 'overlayscrollbars/css/OverlayScrollbars.css';
 // base css file
@@ -47,8 +46,6 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
         <WalletProvider>
           {/* <div className={`${firaCode.variable} font-body`}> */}
           {getLayout(<Component {...pageProps} />)}
-          <SettingsButton />
-          <SettingsDrawer />
           <ModalsContainer />
           <DrawersContainer />
           {/* </div> */}
