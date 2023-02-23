@@ -36,7 +36,9 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
           name="viewport"
           content="width=device-width, initial-scale=1 maximum-scale=1"
         />
-        <title>Criptic - React Next Web3 NFT Crypto Dashboard Template</title>
+        <title>
+          AutoHotKeyJP - AutoHotKey日本語チュートリアル＆コミュニティ
+        </title>
       </Head>
       <ThemeProvider
         attribute="class"
