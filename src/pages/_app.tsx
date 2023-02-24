@@ -1,12 +1,11 @@
 import type { AppProps } from 'next/app';
+//型定義
 import type { NextPageWithLayout } from '@/types';
-// import { Fira_Code } from '@next/font/google';
 import Head from 'next/head';
-import { ThemeProvider } from 'next-themes';
+
 import ModalsContainer from '@/components/modal-views/container';
 import DrawersContainer from '@/components/drawer-views/container';
 
-import { WalletProvider } from '@/lib/hooks/use-connect';
 import 'overlayscrollbars/css/OverlayScrollbars.css';
 // base css file
 import 'swiper/css';
@@ -18,20 +17,13 @@ type AppPropsWithLayout = AppProps & {
   Component: NextPageWithLayout;
 };
 
-// const firaCode = Fira_Code({
-//   weight: ['400', '500', '700'],
-//   style: ['normal'],
-//   subsets: ['latin'],
-//   variable: '--font-body',
-// });
-
 function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
-  //could remove this if you don't need to page level layout
+  // getLayout はNextjsの機能
   const getLayout = Component.getLayout ?? ((page) => page);
   return (
     <>
       <Head>
-        {/* maximum-scale 1 meta tag need to prevent ios input focus auto zooming */}
+        {/* maximum-scale=1でピンチイン・アウトを無効化 */}
         <meta
           name="viewport"
           content="width=device-width, initial-scale=1 maximum-scale=1"
@@ -40,19 +32,9 @@ function CustomApp({ Component, pageProps }: AppPropsWithLayout) {
           AutoHotKeyJP - AutoHotKey日本語チュートリアル＆コミュニティ
         </title>
       </Head>
-      <ThemeProvider
-        attribute="class"
-        enableSystem={false}
-        defaultTheme="light"
-      >
-        <WalletProvider>
-          {/* <div className={`${firaCode.variable} font-body`}> */}
-          {getLayout(<Component {...pageProps} />)}
-          <ModalsContainer />
-          <DrawersContainer />
-          {/* </div> */}
-        </WalletProvider>
-      </ThemeProvider>
+      {getLayout(<Component {...pageProps} />)}
+      <ModalsContainer />
+      <DrawersContainer />
     </>
   );
 }

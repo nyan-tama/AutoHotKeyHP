@@ -12,13 +12,13 @@ class CustomDocument extends Document {
   }
   render() {
     return (
-      <Html lang="en-US" dir="ltr" className="light">
+      <Html lang="ja-JP" dir="ltr" className="light">
         <Head>
-          <link rel="preconnect" href="https://fonts.googleapis.com" />
+          {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500&display=swap"
             rel="stylesheet"
-          />
+          /> */}
         </Head>
         <body>
           <Main />
