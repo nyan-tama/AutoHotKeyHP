@@ -30,10 +30,12 @@ export default function Logo() {
     >
       <span className="relative flex overflow-hidden">
         {isMounted && isDarkMode && (
-          <Image src={darkLogo} alt="Criptic" height={24} priority />
+          <div>AutoHotKeyJP</div>
+          // <Image src={darkLogo} alt="Criptic" height={24} priority />
         )}
         {isMounted && !isDarkMode && (
-          <Image src={lightLogo} alt="Criptic" height={24} priority />
+          <div>AutoHotKeyJP</div>
+          // <Image src={lightLogo} alt="Criptic" height={24} priority />
         )}
       </span>
     </AnchorLink>
