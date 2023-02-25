@@ -22,6 +22,7 @@
     "dayjs": "^1.11.5",
     "ethers": "^5.7.1",
     "framer-motion": "^7.3.6",
+    "gray-matter": "^4.0.3",
     "jotai": "^1.8.4",
     "js-cookie": "^3.0.1",
     "little-state-machine": "^4.7.0",
