@@ -74,5 +74,11 @@
   },
   "engines": {
     "node": ">=12.20.0"
+  },
+  "overrides": {
+    "react-share": {
+      "react": "18.2.0",
+      "react-dom": "18.2.0"
+    }
   }
 }
