@@ -1,5 +1,5 @@
 import cn from 'classnames';
-import AuthorCard from '@/components/ui/author-card';
+// import AuthorCard from '@/components/ui/author-card';
 import Logo from '@/components/ui/logo';
 import { MenuItem } from '@/components/ui/collapsible-menu';
 import Scrollbar from '@/components/ui/scrollbar';
@@ -8,7 +8,7 @@ import { useDrawer } from '@/components/drawer-views/context';
 import { Close } from '@/components/icons/close';
 import { menuItems } from '@/layouts/sidebar/_menu-items';
 //images
-import AuthorImage from '@/assets/images/author.jpg';
+// import AuthorImage from '@/assets/images/author.jpg';
 
 export default function Sidebar({ className }: { className?: string }) {
   const { closeDrawer } = useDrawer();

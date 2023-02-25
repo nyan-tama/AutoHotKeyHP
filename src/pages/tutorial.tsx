@@ -2,6 +2,7 @@ import type { NextPageWithLayout } from '@/types';
 import { NextSeo } from 'next-seo';
 import RootLayout from '@/layouts/_root-layout';
 import { getPostsData } from '../lib/post';
+import Link from 'next/link';
 
 type PostData = {
   slug: string;
@@ -35,7 +36,9 @@ const TutorialPage: NextPageWithLayout<Props> = ({ allPostsData }) => {
       {allPostsData.map(
         ({ slug, description, date, title, author, category, tags }) => (
           <div key={slug}>
-            <div>{slug}</div>
+            <Link href={`/posts/${slug}`} className="text-red-500">
+              {slug}
+            </Link>
             <div>{description}</div>
             <div>{date}</div>
             <div>{title}</div>
